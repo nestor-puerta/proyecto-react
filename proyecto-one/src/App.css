@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4A154B; /* Morado oscuro */
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #4A154B; /* Morado oscuro */
+}
+
+.App-header {
+    background-color: #3A0D3B; /* Morado más oscuro para el header */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.App-header h1 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main h2 {
+    color: #E0D1E3; /* Morado claro para el subtítulo */
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+main p {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #3A0D3B; /* Morado más oscuro para el footer */
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .App-header {
+        padding: 1.5rem;
+    }
+    
+    .App-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .App-header {
+        padding: 1rem;
+    }
+    
+    .App-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    main h2 {
+        font-size: 1.5rem;
+    }
+}

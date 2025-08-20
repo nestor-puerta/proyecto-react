@@ -1,0 +1,189 @@
+/* src/pages/pages.css */
+/* Estilos para la página de Inicio */
+.pagina-inicio {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagina-inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, #00308F 0%, transparent 50%);
+    opacity: 0.3;
+}
+
+/* Estilos para la página Nosotros */
+.pagina-nosotros {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1e1e2e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.pagina-nosotros::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 50%, #002244 0%, transparent 50%);
+    opacity: 0.3;
+}
+
+/* Contenedores */
+.contenedor-pagina {
+    max-width: 1000px;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+/* Estilos comunes de texto */
+.titulo-pagina {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(0, 48, 143, 0.5);
+    background: linear-gradient(45deg, #0074e4, #00a2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.texto-pagina {
+    font-size: 1.3rem;
+    color: #cccccc;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botones */
+.contenedor-botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-primario {
+    background: linear-gradient(45deg, #0074e4, #00308F);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 116, 228, 0.3);
+}
+
+.btn-primario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 116, 228, 0.4);
+}
+
+.btn-secundario {
+    background: transparent;
+    color: #0074e4;
+    border: 2px solid #0074e4;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+    background: rgba(0, 116, 228, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Características (para Nosotros) */
+.caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.caracteristica {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 116, 228, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.caracteristica:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 116, 228, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 116, 228, 0.3);
+}
+
+.icono-caracteristica {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.caracteristica h3 {
+    color: #0074e4;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.caracteristica p {
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo-pagina {
+        font-size: 2.2rem;
+    }
+    
+    .texto-pagina {
+        font-size: 1.1rem;
+    }
+    
+    .contenedor-botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primario, .btn-secundario {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .caracteristicas {
+        grid-template-columns: 1fr;
+    }
+    
+    .pagina-inicio, .pagina-nosotros {
+        padding: 1.5rem;
+    }
+}
